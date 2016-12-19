@@ -3,7 +3,7 @@ const request = require('request');
 const config = require('../conf/config');
 
 
-const ForecastByCityId = Arrow.API.extend({
+const WeatherByCityNameAPI = Arrow.API.extend({
     group: 'weather',
     path: '/api/weather/city/:name',
     method: 'GET',
@@ -29,4 +29,4 @@ const ForecastByCityId = Arrow.API.extend({
     }
 });
 
-module.exports = ForecastByCityId;
+module.exports = WeatherByCityNameAPI;

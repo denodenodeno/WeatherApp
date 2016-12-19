@@ -3,7 +3,7 @@ const request = require('request');
 const config = require('../conf/config');
 
 
-const ForecastByCityId = Arrow.API.extend({
+const WeatherByCityGeolocationAPI = Arrow.API.extend({
     group: 'weather',
     path: '/api/weather/city/geo',
     method: 'GET',
@@ -33,4 +33,4 @@ const ForecastByCityId = Arrow.API.extend({
     }
 });
 
-module.exports = ForecastByCityId;
+module.exports = WeatherByCityGeolocationAPI;
