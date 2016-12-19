@@ -4,9 +4,7 @@ module.exports = {
     debug: true,
     devtool: 'source-map',
     noInfo: false,
-    entry: [
-        './web/src/index'
-    ],
+    entry: './web/src/index',
     target: 'web',
     output: {
         path: path.resolve('./web/public/js'),
@@ -17,8 +15,10 @@ module.exports = {
             {
                 test: /\.js$/,
                 include: path.resolve('./web/src'),
-                exclude: /(node_modules)/,
-                loaders: ['babel']
+                loader: 'babel',
+                query: {
+                    presets: ['react', 'es2015']
+                }
             }
         ]
     }
